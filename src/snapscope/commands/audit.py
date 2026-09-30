@@ -53,7 +53,7 @@ def rank(severity: str) -> int:
 
 
 def audit(snaps: list[Snap], connections: list[Connection]) -> list[Finding]:
-    """Pure audit logic: no I/O, so it can be tested with any inputs."""
+    """Pure audit logic, it can be tested with any inputs."""
     active = {s.name: s for s in snaps if s.active}
     findings: list[Finding] = []
 
