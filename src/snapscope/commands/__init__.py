@@ -24,6 +24,6 @@ class Command:
 
 def all_commands() -> list[Command]:
     # imported here so each command module can import Command from this package
-    from snapscope.commands import audit, cleanup, list_snaps
+    from snapscope.commands import audit, cleanup, list_snaps, refresh, report
 
-    return [list_snaps.COMMAND, audit.COMMAND, cleanup.COMMAND]
+    return [report.COMMAND, list_snaps.COMMAND, audit.COMMAND, cleanup.COMMAND, refresh.COMMAND]
