@@ -1,0 +1,23 @@
+{
+  "type": "sync",
+  "status-code": 200,
+  "status": "OK",
+  "result": [
+    {
+      "summary": "Daemon and tooling that enable snap packages",
+      "name": "snapd",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "available",
+      "type": "snapd",
+      "version": "2.77.1",
+      "channel": "latest/stable",
+      "revision": "28254",
+      "confinement": "strict",
+      "devmode": false
+    }
+  ]
+}

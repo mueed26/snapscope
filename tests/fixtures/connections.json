@@ -1,0 +1,157 @@
+{
+    "type": "sync",
+    "status-code": 200,
+    "status": "OK",
+    "result": {
+        "established": [
+            {
+                "slot": {
+                    "snap": "snapd",
+                    "slot": "hardware-observe"
+                },
+                "plug": {
+                    "snap": "htop",
+                    "plug": "hardware-observe"
+                },
+                "interface": "hardware-observe"
+            },
+            {
+                "slot": {
+                    "snap": "snapd",
+                    "slot": "network"
+                },
+                "plug": {
+                    "snap": "htop",
+                    "plug": "network"
+                },
+                "interface": "network"
+            },
+            {
+                "slot": {
+                    "snap": "snapd",
+                    "slot": "process-control"
+                },
+                "plug": {
+                    "snap": "htop",
+                    "plug": "process-control"
+                },
+                "interface": "process-control"
+            },
+            {
+                "slot": {
+                    "snap": "snapd",
+                    "slot": "system-observe"
+                },
+                "plug": {
+                    "snap": "htop",
+                    "plug": "system-observe"
+                },
+                "interface": "system-observe"
+            }
+        ],
+        "plugs": [
+            {
+                "snap": "htop",
+                "plug": "hardware-observe",
+                "interface": "hardware-observe",
+                "apps": [
+                    "htop"
+                ],
+                "connections": [
+                    {
+                        "snap": "snapd",
+                        "slot": "hardware-observe"
+                    }
+                ]
+            },
+            {
+                "snap": "htop",
+                "plug": "network",
+                "interface": "network",
+                "apps": [
+                    "htop"
+                ],
+                "connections": [
+                    {
+                        "snap": "snapd",
+                        "slot": "network"
+                    }
+                ]
+            },
+            {
+                "snap": "htop",
+                "plug": "process-control",
+                "interface": "process-control",
+                "apps": [
+                    "htop"
+                ],
+                "connections": [
+                    {
+                        "snap": "snapd",
+                        "slot": "process-control"
+                    }
+                ]
+            },
+            {
+                "snap": "htop",
+                "plug": "system-observe",
+                "interface": "system-observe",
+                "apps": [
+                    "htop"
+                ],
+                "connections": [
+                    {
+                        "snap": "snapd",
+                        "slot": "system-observe"
+                    }
+                ]
+            }
+        ],
+        "slots": [
+            {
+                "snap": "snapd",
+                "slot": "hardware-observe",
+                "interface": "hardware-observe",
+                "connections": [
+                    {
+                        "snap": "htop",
+                        "plug": "hardware-observe"
+                    }
+                ]
+            },
+            {
+                "snap": "snapd",
+                "slot": "network",
+                "interface": "network",
+                "connections": [
+                    {
+                        "snap": "htop",
+                        "plug": "network"
+                    }
+                ]
+            },
+            {
+                "snap": "snapd",
+                "slot": "process-control",
+                "interface": "process-control",
+                "connections": [
+                    {
+                        "snap": "htop",
+                        "plug": "process-control"
+                    }
+                ]
+            },
+            {
+                "snap": "snapd",
+                "slot": "system-observe",
+                "interface": "system-observe",
+                "connections": [
+                    {
+                        "snap": "htop",
+                        "plug": "system-observe"
+                    }
+                ]
+            }
+        ]
+    }
+}

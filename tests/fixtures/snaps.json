@@ -1,0 +1,138 @@
+{
+  "type": "sync",
+  "status-code": 200,
+  "status": "OK",
+  "result": [
+    {
+      "summary": "Snap runtime environment",
+      "installed-size": 70033408,
+      "name": "core24",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "active",
+      "type": "base",
+      "version": "20260824",
+      "channel": "latest/stable",
+      "tracking-channel": "latest/stable",
+      "revision": "2124",
+      "confinement": "strict",
+      "devmode": false
+    },
+    {
+      "summary": "The 'hello-world' of snaps",
+      "installed-size": 20480,
+      "name": "hello-world",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "active",
+      "type": "app",
+      "version": "6.4",
+      "channel": "stable",
+      "tracking-channel": "latest/stable",
+      "revision": "29",
+      "confinement": "strict",
+      "devmode": false
+    },
+    {
+      "summary": "Interactive processes viewer",
+      "installed-size": 10883072,
+      "name": "htop",
+      "publisher": {
+        "username": "maxiberta",
+        "display-name": "Maximiliano Bertacchini",
+        "validation": "starred"
+      },
+      "status": "active",
+      "type": "app",
+      "base": "core24",
+      "version": "3.5.3",
+      "channel": "stable",
+      "tracking-channel": "latest/stable",
+      "revision": "6487",
+      "confinement": "strict",
+      "devmode": false
+    },
+    {
+      "summary": "Command line client for controlling a Kubernetes cluster.",
+      "installed-size": 14073856,
+      "name": "kubectl",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "active",
+      "type": "app",
+      "base": "core20",
+      "version": "1.35.9",
+      "channel": "stable",
+      "tracking-channel": "latest/stable",
+      "revision": "3855",
+      "confinement": "classic",
+      "devmode": false
+    },
+    {
+      "summary": "Daemon and tooling that enable snap packages",
+      "installed-size": 52711424,
+      "name": "snapd",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "active",
+      "type": "snapd",
+      "version": "2.76.3",
+      "channel": "stable",
+      "tracking-channel": "latest/stable",
+      "revision": "27738",
+      "confinement": "strict",
+      "devmode": false
+    },
+    {
+      "summary": "Snap runtime environment",
+      "installed-size": 110305280,
+      "name": "core",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "active",
+      "type": "os",
+      "version": "16-2.61.4-20260225",
+      "channel": "stable",
+      "tracking-channel": "latest/stable",
+      "revision": "17292",
+      "confinement": "strict",
+      "devmode": false
+    },
+    {
+      "summary": "Snap runtime environment",
+      "installed-size": 66883584,
+      "name": "core20",
+      "publisher": {
+        "username": "canonical",
+        "display-name": "Canonical",
+        "validation": "verified"
+      },
+      "status": "active",
+      "type": "base",
+      "version": "20260901",
+      "channel": "stable",
+      "tracking-channel": "latest/stable",
+      "revision": "2922",
+      "confinement": "strict",
+      "devmode": false
+    }
+  ],
+  "sources": [
+    "local"
+  ]
+}
