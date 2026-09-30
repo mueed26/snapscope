@@ -1,4 +1,4 @@
-"""`snapscope refresh`: pending updates from the Snap Store, and held snaps."""
+"""Pending snap updates and held snaps."""
 
 from __future__ import annotations
 
@@ -85,7 +85,7 @@ def run(client: SnapdClient, args: argparse.Namespace) -> Result:
     installed = [Snap.from_api(d) for d in client.snaps()]
     try:
         candidates = client.refresh_candidates()
-    except SnapdError as exc:  # e.g. offline: report it instead of failing
+    except SnapdError as exc:  # offline etc: report, don't crash
         return build(installed, None, str(exc))
     return build(installed, candidates)
 

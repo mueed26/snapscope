@@ -1,4 +1,4 @@
-"""`snapscope report` (the default): audit, cleanup and refresh in one run."""
+"""audit + cleanup + refresh in one go (default command)."""
 
 from __future__ import annotations
 
