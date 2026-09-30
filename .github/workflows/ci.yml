@@ -1,0 +1,44 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Type check
+        run: mypy
+      - name: Unit tests
+        run: pytest -v
+
+  real-snapd:
+    # runs against the runner's actual snapd, not the fake one
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - run: sudo snap install hello-world
+      - name: List snaps
+        run: snapscope list
+      - name: Full report
+        # exit 1/2 = findings or updates, only 3 is an error
+        run: snapscope || test $? -le 2
+      - name: JSON is valid
+        run: |
+          snapscope --json > report.json || test $? -le 2
+          python -m json.tool report.json > /dev/null
